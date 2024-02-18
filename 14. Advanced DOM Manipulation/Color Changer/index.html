@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+
+    <style>
+        button {
+
+            padding: 10px;
+            outline: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Click Me</button>
+
+</body>
+
+<script>
+
+    var button = document.querySelector('button');
+    var body = document.querySelector('body');
+
+    button.addEventListener('click', () => {
+
+        if (body.style.backgroundColor == "purple")
+            body.style.backgroundColor = "white";
+
+        else
+            body.style.backgroundColor = "purple";
+    })
+
+</script>
+
+</html>
