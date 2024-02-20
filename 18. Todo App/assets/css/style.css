@@ -1,0 +1,12 @@
+#container{
+
+    margin: 0 auto;
+    width:360px;
+    border:2px solid gray;
+}
+
+.completed{
+
+    color:gray;
+    text-decoration: line-through;
+}
