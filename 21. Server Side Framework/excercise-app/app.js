@@ -20,7 +20,7 @@ app.get("/speak/:animal", (req, res) => {
     else if (animal == 'cow')
         res.send(`The cow says Moo`);
 
-    else
+    else if (animal == 'dog')
         res.send(`The dog says Woof Woof`);
 })
 
