@@ -19,6 +19,13 @@ app.get('/dog', (req, res) => {
     res.send("MEOW!");
 })
 
+// params
+app.get("/r/:name", (req, res) => {
+
+    var name = req.params.name;
+    res.send("Hello " + name.toUpperCase());
+})
+
 // "*" route
 app.get("*", (req, res) => {
 
