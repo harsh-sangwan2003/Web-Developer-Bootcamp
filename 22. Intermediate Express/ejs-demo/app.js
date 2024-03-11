@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+
 app.get("/", (req, res) => {
-    res.render('home.ejs');
+    res.render('home');
 })
 
 app.get('/fallinlovewith/:thing', (req, res) => {
 
     const name = req.params.thing;
-    res.render('love.ejs', { name });
+    res.render('love', { name });
 })
 
 app.get('/posts', (req, res) => {
@@ -19,7 +22,7 @@ app.get('/posts', (req, res) => {
         { title: "Post 2", author: "Colt" },
     ]
 
-    res.render('posts.ejs', { posts });
+    res.render('posts', { posts });
 })
 
 app.listen(3000, () => {
