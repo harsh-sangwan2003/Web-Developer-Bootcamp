@@ -1,0 +1,9 @@
+<h1>The Posts Page</h1>
+
+<% for(let i=0; i<posts.length; i++){ %>
+    <li>
+        <%= posts[i].title %> <strong>
+                <%= posts[i].author %>
+            </strong>
+    </li>
+    <% } %>
