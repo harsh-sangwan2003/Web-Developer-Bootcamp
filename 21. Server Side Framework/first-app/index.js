@@ -19,6 +19,17 @@ app.get('/dog', (req, res) => {
     res.send("MEOW!");
 })
 
+// "*" route
+app.get("*", (req, res) => {
+
+    res.send("You are a star!");
+})
+
+// app.use((req, res) => {
+
+//     res.send("You are a star!");
+// })
+
 app.listen(3000, () => {
     console.log("Backend server is running.");
 })
